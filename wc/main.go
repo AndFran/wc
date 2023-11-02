@@ -14,7 +14,6 @@ func count(reader io.Reader, linesCount bool, byteCount bool) (int, error) {
 	if linesCount {
 		scanner.Split(bufio.ScanLines)
 	} else if byteCount {
-		fmt.Println("SPLIT by bytes")
 		scanner.Split(bufio.ScanBytes)
 	} else {
 		scanner.Split(bufio.ScanWords)
